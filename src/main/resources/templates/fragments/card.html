@@ -1,0 +1,15 @@
+<div class="col-sm-4" th:each="product:${products}">
+    <a class="a" th:href="@{/show/{id}(id=${product.id})}">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img th:src="${product.img_url}" alt="" />
+                    <h2 th:text="${product.price}"> $</h2>
+                    <p th:text="${product.name}"></p>
+                    <button class="btn btn-default add-to-cart"><i
+                            class="fa fa-shopping-cart"></i>Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>

@@ -1,0 +1,8 @@
+<div class="panel-group category-products" id="accordian"><!--category-productsr-->
+    <ul class="list-group">
+        <li class="list-group-item ca" th:each="category:${categories}">
+            <a class="a" th:href="@{/category/{id}(id=${category.id})}" th:text="${category.category_title}"></a>
+        </li>
+
+    </ul>
+</div>
